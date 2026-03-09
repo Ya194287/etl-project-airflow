@@ -1,0 +1,21 @@
+[2026-03-09T17:13:52.485+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-09T17:13:52.514+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mongo_to_postgres_replication.replicate_EventLogs manual__2026-03-09T17:13:43.418003+00:00 [queued]>
+[2026-03-09T17:13:52.524+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mongo_to_postgres_replication.replicate_EventLogs manual__2026-03-09T17:13:43.418003+00:00 [queued]>
+[2026-03-09T17:13:52.524+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2026-03-09T17:13:52.540+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): replicate_EventLogs> on 2026-03-09 17:13:43.418003+00:00
+[2026-03-09T17:13:52.550+0000] {standard_task_runner.py:72} INFO - Started process 1113 to run task
+[2026-03-09T17:13:52.557+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'mongo_to_postgres_replication', 'replicate_EventLogs', 'manual__2026-03-09T17:13:43.418003+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/etl_mongo_to_postgres.py', '--cfg-path', '/tmp/tmpzqyyvi3i']
+[2026-03-09T17:13:52.560+0000] {standard_task_runner.py:105} INFO - Job 70: Subtask replicate_EventLogs
+[2026-03-09T17:13:52.648+0000] {task_command.py:467} INFO - Running <TaskInstance: mongo_to_postgres_replication.replicate_EventLogs manual__2026-03-09T17:13:43.418003+00:00 [running]> on host 0758b4bba4fb
+[2026-03-09T17:13:52.778+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='student' AIRFLOW_CTX_DAG_ID='mongo_to_postgres_replication' AIRFLOW_CTX_TASK_ID='replicate_EventLogs' AIRFLOW_CTX_EXECUTION_DATE='2026-03-09T17:13:43.418003+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-09T17:13:43.418003+00:00'
+[2026-03-09T17:13:52.779+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-09T17:13:52.814+0000] {base.py:84} INFO - Retrieving connection 'mongo_default'
+[2026-03-09T17:13:52.851+0000] {logging_mixin.py:190} INFO - Found 3 documents in EventLogs
+[2026-03-09T17:13:52.867+0000] {base.py:84} INFO - Retrieving connection 'postgres_etl'
+[2026-03-09T17:13:52.892+0000] {logging_mixin.py:190} INFO - Loaded 3 rows into event_logs
+[2026-03-09T17:13:52.894+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-09T17:13:52.915+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-09T17:13:52.915+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=mongo_to_postgres_replication, task_id=replicate_EventLogs, run_id=manual__2026-03-09T17:13:43.418003+00:00, execution_date=20260309T171343, start_date=20260309T171352, end_date=20260309T171352
+[2026-03-09T17:13:52.977+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-09T17:13:53.002+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-09T17:13:53.005+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
